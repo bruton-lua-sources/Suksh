@@ -1,0 +1,244 @@
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
+local Lighting = game:GetService("Lighting")
+
+local function addInstance(instance)
+    if not _G.IluminationInstances then
+        _G.IluminationInstances = {}
+    end
+    table.insert(_G.IluminationInstances, instance)
+end
+
+local Bloom = Instance.new("BloomEffect")
+Bloom.Intensity = 0.1
+Bloom.Threshold = 0
+Bloom.Size = 100
+Bloom.Parent = Lighting
+addInstance(Bloom)
+
+local Tropic = Instance.new("Sky")
+Tropic.Name = "Tropic"
+Tropic.SkyboxUp = "http://www.roblox.com/asset/?id=169210149"
+Tropic.SkyboxLf = "http://www.roblox.com/asset/?id=169210133"
+Tropic.SkyboxBk = "http://www.roblox.com/asset/?id=169210090"
+Tropic.SkyboxFt = "http://www.roblox.com/asset/?id=169210121"
+Tropic.StarCount = 100
+Tropic.SkyboxDn = "http://www.roblox.com/asset/?id=169210108"
+Tropic.SkyboxRt = "http://www.roblox.com/asset/?id=169210143"
+Tropic.Parent = Bloom
+
+local Sky = Instance.new("Sky")
+Sky.SkyboxUp = "http://www.roblox.com/asset/?id=196263782"
+Sky.SkyboxLf = "http://www.roblox.com/asset/?id=196263721"
+Sky.SkyboxBk = "http://www.roblox.com/asset/?id=196263721"
+Sky.SkyboxFt = "http://www.roblox.com/asset/?id=196263721"
+Sky.CelestialBodiesShown = false
+Sky.SkyboxDn = "http://www.roblox.com/asset/?id=196263643"
+Sky.SkyboxRt = "http://www.roblox.com/asset/?id=196263721"
+Sky.Parent = Bloom
+
+local Bloom2 = Instance.new("BloomEffect")
+Bloom2.Enabled = false
+Bloom2.Intensity = 0.35
+Bloom2.Threshold = 0.2
+Bloom2.Size = 56
+Bloom2.Parent = Lighting
+addInstance(Bloom2)
+
+local Tropic2 = Instance.new("Sky")
+Tropic2.Name = "Tropic"
+Tropic2.SkyboxUp = "http://www.roblox.com/asset/?id=169210149"
+Tropic2.SkyboxLf = "http://www.roblox.com/asset/?id=169210133"
+Tropic2.SkyboxBk = "http://www.roblox.com/asset/?id=169210090"
+Tropic2.SkyboxFt = "http://www.roblox.com/asset/?id=169210121"
+Tropic2.StarCount = 100
+Tropic2.SkyboxDn = "http://www.roblox.com/asset/?id=169210108"
+Tropic2.SkyboxRt = "http://www.roblox.com/asset/?id=169210143"
+Tropic2.Parent = Bloom2
+
+local Sky2 = Instance.new("Sky")
+Sky2.SkyboxUp = "http://www.roblox.com/asset/?id=196263782"
+Sky2.SkyboxLf = "http://www.roblox.com/asset/?id=196263721"
+Sky2.SkyboxBk = "http://www.roblox.com/asset/?id=196263721"
+Sky2.SkyboxFt = "http://www.roblox.com/asset/?id=196263721"
+Sky2.CelestialBodiesShown = false
+Sky2.SkyboxDn = "http://www.roblox.com/asset/?id=196263643"
+Sky2.SkyboxRt = "http://www.roblox.com/asset/?id=196263721"
+Sky2.Parent = Bloom2
+
+local Blur = Instance.new("BlurEffect")
+Blur.Size = 2
+Blur.Parent = Lighting
+addInstance(Blur)
+
+local Efecto = Instance.new("BlurEffect")
+Efecto.Name = "Efecto"
+Efecto.Enabled = false
+Efecto.Size = 2
+Efecto.Parent = Lighting
+addInstance(Efecto)
+
+local Inaritaisha = Instance.new("ColorCorrectionEffect")
+Inaritaisha.Name = "Inari taisha"
+Inaritaisha.Saturation = 0.05
+Inaritaisha.TintColor = Color3.fromRGB(255, 224, 219)
+Inaritaisha.Parent = Lighting
+addInstance(Inaritaisha)
+
+local Normal = Instance.new("ColorCorrectionEffect")
+Normal.Name = "Normal"
+Normal.Enabled = false
+Normal.Saturation = -0.2
+Normal.TintColor = Color3.fromRGB(255, 232, 215)
+Normal.Parent = Lighting
+addInstance(Normal)
+
+local SunRays = Instance.new("SunRaysEffect")
+SunRays.Intensity = 0.05
+SunRays.Parent = Lighting
+addInstance(SunRays)
+
+local Sunset = Instance.new("Sky")
+Sunset.Name = "Sunset"
+Sunset.SkyboxUp = "rbxassetid://323493360"
+Sunset.SkyboxLf = "rbxassetid://323494252"
+Sunset.SkyboxBk = "rbxassetid://323494035"
+Sunset.SkyboxFt = "rbxassetid://323494130"
+Sunset.SkyboxDn = "rbxassetid://323494368"
+Sunset.SunAngularSize = 14
+Sunset.SkyboxRt = "rbxassetid://323494067"
+Sunset.Parent = Lighting
+addInstance(Sunset)
+
+local Takayama = Instance.new("ColorCorrectionEffect")
+Takayama.Name = "Takayama"
+Takayama.Enabled = false
+Takayama.Saturation = -0.3
+Takayama.Contrast = 0.1
+Takayama.TintColor = Color3.fromRGB(235, 214, 204)
+Takayama.Parent = Lighting
+addInstance(Takayama)
+
+Lighting.Brightness = 2.14
+Lighting.ColorShift_Bottom = Color3.fromRGB(11, 0, 20)
+Lighting.ColorShift_Top = Color3.fromRGB(240, 127, 14)
+Lighting.OutdoorAmbient = Color3.fromRGB(34, 0, 49)
+Lighting.ClockTime = 6.7
+Lighting.FogColor = Color3.fromRGB(94, 76, 106)
+Lighting.FogEnd = 1000
+Lighting.FogStart = 0
+Lighting.ExposureCompensation = 0.24
+Lighting.ShadowSoftness = 0
+Lighting.Ambient = Color3.fromRGB(59, 33, 27)
+
+local Bloom3 = Instance.new("BloomEffect")
+Bloom3.Intensity = 0.1
+Bloom3.Threshold = 0
+Bloom3.Size = 100
+Bloom3.Parent = Lighting
+addInstance(Bloom3)
+
+local Tropic3 = Instance.new("Sky")
+Tropic3.Name = "Tropic"
+Tropic3.SkyboxUp = "http://www.roblox.com/asset/?id=169210149"
+Tropic3.SkyboxLf = "http://www.roblox.com/asset/?id=169210133"
+Tropic3.SkyboxBk = "http://www.roblox.com/asset/?id=169210090"
+Tropic3.SkyboxFt = "http://www.roblox.com/asset/?id=169210121"
+Tropic3.StarCount = 100
+Tropic3.SkyboxDn = "http://www.roblox.com/asset/?id=169210108"
+Tropic3.SkyboxRt = "http://www.roblox.com/asset/?id=169210143"
+Tropic3.Parent = Bloom3
+
+local Sky3 = Instance.new("Sky")
+Sky3.SkyboxUp = "http://www.roblox.com/asset/?id=196263782"
+Sky3.SkyboxLf = "http://www.roblox.com/asset/?id=196263721"
+Sky3.SkyboxBk = "http://www.roblox.com/asset/?id=196263721"
+Sky3.SkyboxFt = "http://www.roblox.com/asset/?id=196263721"
+Sky3.CelestialBodiesShown = false
+Sky3.SkyboxDn = "http://www.roblox.com/asset/?id=196263643"
+Sky3.SkyboxRt = "http://www.roblox.com/asset/?id=196263721"
+Sky3.Parent = Bloom3
+
+local Bloom4 = Instance.new("BloomEffect")
+Bloom4.Enabled = false
+Bloom4.Intensity = 0.35
+Bloom4.Threshold = 0.2
+Bloom4.Size = 56
+Bloom4.Parent = Lighting
+addInstance(Bloom4)
+
+local Tropic4 = Instance.new("Sky")
+Tropic4.Name = "Tropic"
+Tropic4.SkyboxUp = "http://www.roblox.com/asset/?id=169210149"
+Tropic4.SkyboxLf = "http://www.roblox.com/asset/?id=169210133"
+Tropic4.SkyboxBk = "http://www.roblox.com/asset/?id=169210090"
+Tropic4.SkyboxFt = "http://www.roblox.com/asset/?id=169210121"
+Tropic4.StarCount = 100
+Tropic4.SkyboxDn = "http://www.roblox.com/asset/?id=169210108"
+Tropic4.SkyboxRt = "http://www.roblox.com/asset/?id=169210143"
+Tropic4.Parent = Bloom4
+
+local Sky4 = Instance.new("Sky")
+Sky4.SkyboxUp = "http://www.roblox.com/asset/?id=196263782"
+Sky4.SkyboxLf = "http://www.roblox.com/asset/?id=196263721"
+Sky4.SkyboxBk = "http://www.roblox.com/asset/?id=196263721"
+Sky4.SkyboxFt = "http://www.roblox.com/asset/?id=196263721"
+Sky4.CelestialBodiesShown = false
+Sky4.SkyboxDn = "http://www.roblox.com/asset/?id=196263643"
+Sky4.SkyboxRt = "http://www.roblox.com/asset/?id=196263721"
+Sky4.Parent = Bloom4
+
+local Blur2 = Instance.new("BlurEffect")
+Blur2.Size = 2
+Blur2.Parent = Lighting
+addInstance(Blur2)
+
+local Efecto2 = Instance.new("BlurEffect")
+Efecto2.Name = "Efecto"
+Efecto2.Enabled = false
+Efecto2.Size = 2
+Efecto2.Parent = Lighting
+addInstance(Efecto2)
+
+local Inaritaisha2 = Instance.new("ColorCorrectionEffect")
+Inaritaisha2.Name = "Inari taisha"
+Inaritaisha2.Saturation = 0.05
+Inaritaisha2.TintColor = Color3.fromRGB(255, 224, 219)
+Inaritaisha2.Parent = Lighting
+addInstance(Inaritaisha2)
+
+local Normal2 = Instance.new("ColorCorrectionEffect")
+Normal2.Name = "Normal"
+Normal2.Enabled = false
+Normal2.Saturation = -0.2
+Normal2.TintColor = Color3.fromRGB(255, 232, 215)
+Normal2.Parent = Lighting
+addInstance(Normal2)
+
+local SunRays2 = Instance.new("SunRaysEffect")
+SunRays2.Intensity = 0.05
+SunRays2.Parent = Lighting
+addInstance(SunRays2)
+
+local Sunset2 = Instance.new("Sky")
+Sunset2.Name = "Sunset"
+Sunset2.SkyboxUp = "rbxassetid://323493360"
+Sunset2.SkyboxLf = "rbxassetid://323494252"
+Sunset2.SkyboxBk = "rbxassetid://323494035"
+Sunset2.SkyboxFt = "rbxassetid://323494130"
+Sunset2.SkyboxDn = "rbxassetid://323494368"
+Sunset2.SunAngularSize = 14
+Sunset2.SkyboxRt = "rbxassetid://323494067"
+Sunset2.Parent = Lighting
+addInstance(Sunset2)
+
+local Takayama2 = Instance.new("ColorCorrectionEffect")
+Takayama2.Name = "Takayama"
+Takayama2.Enabled = false
+Takayama2.Saturation = -0.3
+Takayama2.Contrast = 0.1
+Takayama2.TintColor = Color3.fromRGB(235, 214, 204)
+Takayama2.Parent = Lighting
+addInstance(Takayama2)
